@@ -9,7 +9,11 @@
         android:id="@+id/frgmntHome"
         android:name="com.mixlr.panos.elaboratenavigationexample.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_frgmntHome_to_frgmntTerms"
+            app:destination="@id/frgmntTerms" />
+    </fragment>
     <fragment
         android:id="@+id/frgmntTerms"
         android:name="com.mixlr.panos.elaboratenavigationexample.TermsFragment"
