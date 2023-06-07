@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ElaborateNavigationExample</string>
+    <string name="button_sign_up">Sign Up</string>
+    <string name="button_terms">Terms</string>
 </resources>
