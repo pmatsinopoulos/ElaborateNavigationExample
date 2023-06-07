@@ -5,11 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.findNavController
-import com.mixlr.panos.elaboratenavigationexample.databinding.FragmentNameBinding
+import com.mixlr.panos.elaboratenavigationexample.databinding.FragmentEmailBinding
 
-class NameFragment : Fragment() {
-    private lateinit var binding: FragmentNameBinding
+class EmailFragment : Fragment() {
+    private lateinit var binding: FragmentEmailBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,10 +18,7 @@ class NameFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentNameBinding.inflate(inflater, container, false)
-        binding.btnNext.setOnClickListener {
-            it.findNavController().navigate(R.id.action_frgmntName_to_frgmntEmail)
-        }
+        binding = FragmentEmailBinding.inflate(inflater, container, false)
         return binding.root
     }
 }
