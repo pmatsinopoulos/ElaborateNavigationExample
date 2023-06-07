@@ -1,10 +1,12 @@
 package com.mixlr.panos.elaboratenavigationexample
 
 import android.os.Bundle
+import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.findNavController
 import com.mixlr.panos.elaboratenavigationexample.databinding.FragmentNameBinding
 
@@ -21,7 +23,11 @@ class NameFragment : Fragment() {
     ): View {
         binding = FragmentNameBinding.inflate(inflater, container, false)
         binding.btnNext.setOnClickListener {
-            it.findNavController().navigate(R.id.action_frgmntName_to_frgmntEmail)
+            if (!TextUtils.isEmpty(binding.etName.text.toString())) {
+                it.findNavController().navigate(R.id.action_frgmntName_to_frgmntEmail)
+            } else {
+                Toast.makeText(context, "You need to give a name", Toast.LENGTH_LONG).show()
+            }
         }
         return binding.root
     }
