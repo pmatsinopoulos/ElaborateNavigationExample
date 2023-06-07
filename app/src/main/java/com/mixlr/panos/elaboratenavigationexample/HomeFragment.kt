@@ -23,6 +23,9 @@ class HomeFragment : Fragment() {
         binding.btnTerms.setOnClickListener {
             it.findNavController().navigate(R.id.action_frgmntHome_to_frgmntTerms)
         }
+        binding.btnSignUp.setOnClickListener {
+            it.findNavController().navigate(R.id.action_frgmntHome_to_frgmntName)
+        }
         return binding.root
     }
 }

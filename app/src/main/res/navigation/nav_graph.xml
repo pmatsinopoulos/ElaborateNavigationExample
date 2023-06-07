@@ -13,10 +13,18 @@
         <action
             android:id="@+id/action_frgmntHome_to_frgmntTerms"
             app:destination="@id/frgmntTerms" />
+        <action
+            android:id="@+id/action_frgmntHome_to_frgmntName"
+            app:destination="@id/nameFragment" />
     </fragment>
     <fragment
         android:id="@+id/frgmntTerms"
         android:name="com.mixlr.panos.elaboratenavigationexample.TermsFragment"
         android:label="fragment_terms"
         tools:layout="@layout/fragment_terms" />
+    <fragment
+        android:id="@+id/nameFragment"
+        android:name="com.mixlr.panos.elaboratenavigationexample.NameFragment"
+        android:label="fragment_name"
+        tools:layout="@layout/fragment_name" />
 </navigation>
